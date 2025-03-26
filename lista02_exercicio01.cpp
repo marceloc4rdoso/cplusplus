@@ -6,6 +6,8 @@ using namespace std;
 
 int main() { 
   int num;
+
+  // pode-se usar ternário 
   cout << "Digite um número: ";
   cin >> num;
   if (num % 2 == 0) {
