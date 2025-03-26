@@ -21,11 +21,7 @@ int main(){
 
     float rendimento = 3.6;
 
-    
-    //(A + (B-1)) / B
-    //(A + (B/2)) / B
-
-    int quantidade_lata = (superficie + (rendimento/2) / rendimento);
+    int quantidade_lata = ceil(superficie / rendimento);
 
     cout << "Quantidade de latas: " << quantidade_lata << endl;
 
