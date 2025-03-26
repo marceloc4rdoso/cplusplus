@@ -19,7 +19,13 @@ int main(){
 
     cout << "Superficie: " << superficie << endl;
 
-    float quantidade_lata = std:: ceil(superficie / 3.6);
+    float rendimento = 3.6;
+
+    
+    //(A + (B-1)) / B
+    //(A + (B/2)) / B
+
+    int quantidade_lata = (superficie + (rendimento/2) / rendimento);
 
     cout << "Quantidade de latas: " << quantidade_lata << endl;
 
