@@ -11,25 +11,39 @@ e o desconto adquirido.
 */
 int main(){ 
     
-    cout << "Super promoção de óculos!" <<endl;
+    cout << "----Super promoção de óculos!----" <<endl;
+    cout << "|Seu óculos com preços incríveis|" <<endl;
+    cout << "|    Sua idade vale desconto!   |" <<endl;
+    cout << "---------------------------------" <<endl;
     
-    int idade;
+    float idade;
     cout << "Digite sua idade: ";
     cin >> idade;
     
     
     float oculos = 200;
-    float desconto = 0.10;
+    float desconto = (idade/100);
+    
     float valorDesconto = oculos * desconto;
     float valorFinal = oculos - valorDesconto;
     
-    
-    
-    cout << "Desconto: " << desconto * 100 << "%"<<endl;
-    cout << "Valor do descontos: " << valorDesconto  << endl;
-    cout << "Valor Final do Óculos: " << valorFinal << endl;
-
-    
+    if (idade < 10){
+        desconto == 0.10;
+        cout << "Desconto: " << desconto * 100<< "%"<<endl;
+        cout << "Valor do descontos: " << valorDesconto  << endl;
+        cout << "Valor Final do Óculos: " << valorFinal << endl;
+    }
+    else if (idade > 80){
+        desconto == 0.80;
+        cout << "Desconto: " << desconto * 100<< "%"<<endl;
+        cout << "Valor do descontos: " << valorDesconto  << endl;
+        cout << "Valor Final do Óculos: " << valorFinal << endl;
+    }
+    else{
+        cout << "Desconto: " << desconto * 100 << "%"<<endl;
+        cout << "Valor do descontos: " << valorDesconto  << endl;
+        cout << "Valor Final do Óculos: " << valorFinal << endl;
+    }
 
     system("pause");
 }
