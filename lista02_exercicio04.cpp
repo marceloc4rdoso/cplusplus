@@ -28,22 +28,18 @@ int main(){
     float valorFinal = oculos - valorDesconto;
     
     if (idade < 10){
-        desconto == 0.10;
-        cout << "Desconto: " << desconto * 100<< "%"<<endl;
-        cout << "Valor do descontos: " << valorDesconto  << endl;
-        cout << "Valor Final do Óculos: " << valorFinal << endl;
+        desconto = 0.10;
+        
     }
     else if (idade > 80){
-        desconto == 0.80;
-        cout << "Desconto: " << desconto * 100<< "%"<<endl;
-        cout << "Valor do descontos: " << valorDesconto  << endl;
-        cout << "Valor Final do Óculos: " << valorFinal << endl;
-    }
-    else{
-        cout << "Desconto: " << desconto * 100 << "%"<<endl;
-        cout << "Valor do descontos: " << valorDesconto  << endl;
-        cout << "Valor Final do Óculos: " << valorFinal << endl;
+        desconto = 0.80;
+        
     }
 
+    cout << "Desconto: " << desconto * 100 << "%"<<endl;
+    cout << "Valor do descontos: R$ " << valorDesconto  << endl;
+    cout << "Valor Final do Óculos: R$ " << valorFinal << endl;
+
+    
     system("pause");
 }
