@@ -11,25 +11,25 @@ e o desconto adquirido.
 */
 int main(){ 
     
-    cout << "Será que você anda de Gratís?" <<endl;
+    cout << "Super promoção de óculos!" <<endl;
     
-    float nota1, nota2;
-    cout << "Digite a 1ª nota: "<<endl;
-    cin >> nota1;
-    cout << "Digite a 2ª nota: "<<endl;
-    cin >> nota2;
+    int idade;
+    cout << "Digite sua idade: ";
+    cin >> idade;
     
-    float media = (nota1 + nota2) / 2;
+    
+    float oculos = 200;
+    float desconto = 0.10;
+    float valorDesconto = oculos * desconto;
+    float valorFinal = oculos - valorDesconto;
+    
+    
+    
+    cout << "Desconto: " << desconto * 100 << "%"<<endl;
+    cout << "Valor do descontos: " << valorDesconto  << endl;
+    cout << "Valor Final do Óculos: " << valorFinal << endl;
 
-    if (media < 5){
-        cout << "Repovado Gafanhoto ;(\nSua média foi "<< media <<endl;
-    }
-    else if (media >= 5 && media <= 7){
-        cout << "Recuperação Gafanhoto!\nSua média foi "<< media <<endl;
-    }    
-    else{
-        cout << "Aprovado Gafanhoto!\nSua média foi "<< media <<endl;
-    }
-        
+    
+
     system("pause");
 }
