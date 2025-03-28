@@ -1,67 +1,47 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 /*
-5) Uma empresa pretende fazer um reajuste salarial para os funcionários e precisa da sua
-ajuda para criar um programa. Ficou definido os seguintes reajustes:
-• Salário Abaixo de R$1.500,00 → Aumento de 25%
-• Salário Entre de R$1.500,00 e R$1.999,99 → Aumento de 20%
-• Salário Entre de R$2.000,00 e R$2.999,99 → Aumento de 15%
-• Salário Entre de R$3.000,00 e R$4.999,99 → Aumento de 10%
-• Salário Igual ou Acima de R$5.000,00 → Aumento de 5%
-Faça um programa que pergunte ao usuário qual seu Salário Atual e mostre ao usuário:
+6) Leia o texto abaixo sobre o Ano Bissexto:
 
-1. O salário atual;
-2. A porcentagem do reajuste;
-3. O aumento em R$;
-4. O salário final após o reajuste.
+“O calendário gregoriano, estabelecido pela primeira vez em 1582 pelo Papa Gregório XIII, foi projetado para
+corrigir os erros introduzidos pelo calendário juliano, que é menos preciso.
+No calendário gregoriano, um ano normal consiste em 365 dias. Como o comprimento real de um ano sideral (o
+tempo necessário para a Terra girar uma vez sobre o Sol) é na verdade de 365,2425 dias, um "ano bissexto" de
+366 dias é usado uma vez a cada quatro anos para eliminar o erro causado por três anos normais (mas curtos).
+Qualquer ano que seja uniformemente divisível por 4 é um ano bissexto: por exemplo, 1988, 1992 e 1996
+são anos bissextos.
+No entanto, ainda há um pequeno erro que deve ser contabilizado. Para eliminar esse erro, o calendário
+gregoriano estipula que um ano que é uniformemente divisível por 100 (por exemplo, 1900) é um ano
+bissexto apenas se também é igualmente divisível por 400.
+Por essa razão, os seguintes anos não são bissextos:
+1700, 1800, 1900, 2100, 2200, 2300, 2500, 2600:
+Isso porque eles são uniformemente divisíveis por 100, mas não por 400.
+Os seguintes anos são bissextos: 1600, 2000, 2400
+Isso porque eles são uniformemente divisíveis por 100 e 400.”
+Faça um programa no qual o usuário informe um ano e o sistema responda se o ano é
+bissexto ou não.
 */
 int main(){ 
     
     cout << "---------------------------------" <<endl;
     cout << "|      Reajuste anual 2025      |" <<endl;
-    cout << "|     Muito bom Gafanhote...    |" <<endl;
+    cout << "|     Muito bom Gafanhoto...    |" <<endl;
     cout << "---------------------------------" <<endl;
     
-    float salarioAtual;
-    float reajuste = 0.25;
+    int ano;
+    //bool anoBissexto = "É um ano Bissexto:"
     
-    float aumento;
-    float salarioFinal;
+    cout << "Digite um ano ";
+    cin >> ano;
     
-    cout << "Qual o seu salário atual? ";
-    cin >> salarioAtual;
-    
-    if(salarioAtual < 1500){
-        aumento = salarioAtual * reajuste;
-    }
-    
-    else if(salarioAtual >= 1500 && salarioAtual <= 1999.99){
-        reajuste = (reajuste - 0.05);
-        aumento = salarioAtual * reajuste;
-    }
-    
-    else if(salarioAtual >= 2000 && salarioAtual <= 2999.99){
-        reajuste = (reajuste - 0.10);
-        aumento = salarioAtual * reajuste;
-    }
-    
-    else if(salarioAtual >= 3000 && salarioAtual <= 4999.99){
-        reajuste = (reajuste - 0.15);
-        aumento = salarioAtual * reajuste;
+    if(ano % 4 == 0 && ano % 100 == 0 && ano % 400 == 0){
+        cout << ano <<" Ano Bissexto!"<< endl;
     }
     else{
-        reajuste = (reajuste - 0.20);
-        aumento = salarioAtual * reajuste;
+        cout << ano << " Não é um ano Bissexto!" << endl;
     }
-    
-    salarioFinal = salarioAtual + aumento;
-    cout << "---------------------------------" <<endl;
-    cout << "Salário atual; " << salarioAtual<<endl;
-    cout << "Percentual de reajuste: " << reajuste *100 << "%" << endl;
-    cout << "Aumento em R$; " << aumento << endl;
-    cout << "Salário final. R$; " << salarioFinal << endl;
-    cout << "---------------------------------" <<endl;
     
     system("pause");
 }
