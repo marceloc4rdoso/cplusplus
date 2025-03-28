@@ -29,10 +29,7 @@ int main(){
     cout << "Digite ano ";
     cin >> ano;
     
-    
-    
-    
-    cout << dia <<"/"<< validaMes mes (>= 1 && mes <= 12) ? << mes << : <<"/"<< ano << endl;
+    cout << dia <<"/"<< validaMes mes (>= 1 && mes <= 12) ? << mes << : <<"/"<< ano << end;
     
     
     system("pause");
