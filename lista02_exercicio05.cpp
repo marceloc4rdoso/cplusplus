@@ -28,6 +28,7 @@ int main(){
     int ano;
     
     float salarioAtual;
+    float salarioReajustado;
     
     cout << "Digite seu salário";
     cin >> salarioAtual;
@@ -40,11 +41,8 @@ int main(){
 
     
     if(salarioAtual < 1500){
-        salarioAtual * faixa1; 
-        cout << ano <<" Ano Bissexto!"<< endl;
-    }
-    else{
-        cout << ano << " Não é um ano Bissexto!" << endl;
+        salarioReajustado = salarioAtual * faixa1; 
+        cout <<"Seu novo salário é de R$ "<< salarioReajustado << endl;
     }
     
     system("pause");
