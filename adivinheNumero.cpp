@@ -11,24 +11,36 @@ using namespace std;
 const int TENTATIVAS = 10;
 
 int main() {
+    srand(time(0));
     
     int chute;
-    int sorteado = 7500;
-    int numeroTentativas;
+    short sorteado = rand() % 10000 + 1;
+    
+    
+    cout << "Chute um número entre 1 e 10000: ";
     
     for (int i = 0; i < TENTATIVAS; i++ ){
-        cout << "Chute um número entre 1 e 10000: ";
+        int numeroTentativas;
+        
         cin >> chute;
-        if (chute != sorteado)
+        if (chute != sorteado) {
+            numeroTentativas += i;
             if(chute > sorteado)
-                cout << "ERRROU:\nO Numero " << chute << " é MAIOR que o número para advinhar.\nTente um número MENOR!\n";
-            else if(chute < sorteado)
-                cout << "ERRROU:\nO Numero " << chute << " é MENOR que o número para advinhar.\nTente um número MAIOR!\n";
+                cout << "ERRROU:\nTente um número MENOR!\nDigite novamente: ";
+            if(chute < sorteado)
+                cout << "ERRROU! Tente um MAIOR!\nDigite novamente: ";
+        }
         else{
-                cout << "ACERTOOOOUUU:\nO Numero " << sorteado << " é o numero correto!";   
-            }
-                 
+            cout << "ACERTOOOOUUU:\nO Numero " << sorteado << " é o numero correto!\n"; 
+            ;
+            cout << "ACABOU\nVocê acertou com " << numeroTentativas << " tentativas";
+        }
+        
     }
+    
+    cout << "Você esgotou suas 10 tentativas\n";
+    
+    
     
     
 }
