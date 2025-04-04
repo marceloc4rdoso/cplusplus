@@ -9,19 +9,25 @@ Você jogará contra o computador e contabilizara o número de vitórias, empate
 #include<cstdlib>
 #include<ctime>
 
-//srand(0); 
+
 using namespace std;
 
 int main(){
+    srand(0); 
     
     int jogadas;
     cout << "Quantas jogadas? " << endl;
     cin >> jogadas;
     
+    int vitórias;
+    int derrotas;
+    int empates;
+    
+    
     for (int i = 0; i < jogadas; i++){
         int jogador;
-        //short computador = rand() % 2 + 1;
-        int computador = 3;
+        short computador = rand() % 3;
+        //int computador = 3;
         
         cout << "Digite 1 para PAPEL! \nDigite 2 para R para PEDRA\nDigite 3 para R para TESOURA" << endl;
         cin >> jogador;
@@ -29,14 +35,16 @@ int main(){
         if (jogador == 1 && computador == 2 || 
             jogador == 2 && computador == 3 || 
             jogador == 3 && computador == 1)
-            cout << " Jogador Ganhou" << endl;
+            cout << " Jogador Ganhou\n";
+        else if (computador == 1 && jogador == 2 || 
+            computador == 2 && jogador == 3 || 
+            computador == 3 && jogador == 1)
+            cout << " Computador Ganhou\n";
         else{
-            cout << " Computador Ganhou" << endl;
+            cout << " Empatou\n";
         }
         
-    }
-    
-        
+    }   
     
     system("pause");
     
