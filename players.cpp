@@ -4,11 +4,12 @@
 
 using namespace std;
 
-
 string playerOne;
 string playerTwo;
 
 int main() {
+    
+    srand(0);
     // Write C++ code here
    cout << "Insira o nome do 1º jogador: ";
    getline(cin,playerOne);
@@ -21,9 +22,22 @@ int main() {
    cout << "----" << " Starting Points " << "----\n";
    cout << playerOne <<" | "<< startPointsPlayOne << " X " << startPointsPlayTwo <<" | " << playerTwo << endl;
    
-   int gameRound = 3
+   int gameRound = 3;
+   // golpes
+   int headbutt;
+   int punch;
    
-   for( i )
+   cout << "Escolha o golpe!\nH para cabeçada e P para soco";
+   
+   while(gameRound > 0){
+       //
+   }
+    
+    for(int i = 0 ; i < gameRound; i++){
+        short punch = rand() % 6 + 1;
+        
+    
+    }   
    
    
 }
