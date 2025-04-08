@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <array> // std::array
 using namespace std;
 
@@ -13,9 +14,25 @@ using namespace std;
 
 int main() {
     
-    string diasSemana [] = {"Segunda-feira",  "Terca-feira", "Quarta-feira", "Quinta-feira","Sexta-feira", "Sabado", "Domingo"};
+    string diasSemana [] = {"","Domingo", "Segunda-feira",  "Terca-feira", "Quarta-feira", "Quinta-feira","Sexta-feira", "Sabado"};
     
-    cout << "Escolha o dia de vendas " << endl;
-    cout << "[ 0 ] Segunda-feira  [ 1 ] Terca-feira  [ 2 ] Quarta-feira\n[ 3 ] Quinta-feira. [ 4 ] Sexta-feira  [ 5 ] Sabado\n[ 6 ] Domingo";
+    int qtdDias = sizeof(diasSemana) / sizeof(diasSemana[0]);
+    cout << "Lancamento de Vendas Diárias da Semana!\n";
+    cout << "[ 1 ] " <<  diasSemana [1] << " [ 2 ] " <<  diasSemana [2] << "\n[ 3 ] " <<  diasSemana [3] << " [ 4 ] " <<  diasSemana [4] << "\n[ 5 ] " <<  diasSemana [5] << " [ 6 ] " <<  diasSemana [6] << "\n[ 7 ] " <<  diasSemana [7] <<endl;
     
-}
+    for (int i = 0; i < qtdDias; i++){
+        float valorVenda;
+        cout << "Digite a venda de " << diasSemana[i]<<endl;
+        cin >> valorVenda;
+        
+        for (int i = 0; valorVenda; i++ ) {
+            cout << "Vendas de " << diasSemana[i] << valorVenda <<endl;
+            
+        }
+        
+    }
+    
+   
+    //getline(cin, diaSemana);
+    
+}   
