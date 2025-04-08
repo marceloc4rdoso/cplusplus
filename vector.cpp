@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    vector<string> nomes = {"Ana", "Carlos", "Beatriz", "Marcelo", "Rafaela"}; 
+    vector<string> nomes = {"Ana", "Carlos", "Beatriz", "Marcelo", "Rafaela", "Mariana", "Juliana", "Ariano", "Guanimedes", "Valter", "Jesse", "Sol Godman"}; 
     
     nomes.erase(nomes.begin()+ 4);
     nomes.push_back("Gabriel");
