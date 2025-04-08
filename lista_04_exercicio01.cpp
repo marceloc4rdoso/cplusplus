@@ -14,23 +14,28 @@ using namespace std;
 
 int main() {
     
-    string diasSemana [] = {"","Domingo", "Segunda-feira",  "Terca-feira", "Quarta-feira", "Quinta-feira","Sexta-feira", "Sabado"};
+    string diasSemana [] = {"Domingo", "Segunda-feira",  "Terca-feira", "Quarta-feira", "Quinta-feira","Sexta-feira", "Sabado"};
     
     int qtdDias = sizeof(diasSemana) / sizeof(diasSemana[0]);
     cout << "Lancamento de Vendas Diárias da Semana!\n";
-    cout << "[ 1 ] " <<  diasSemana [1] << " [ 2 ] " <<  diasSemana [2] << "\n[ 3 ] " <<  diasSemana [3] << " [ 4 ] " <<  diasSemana [4] << "\n[ 5 ] " <<  diasSemana [5] << " [ 6 ] " <<  diasSemana [6] << "\n[ 7 ] " <<  diasSemana [7] <<endl;
+    
+    float valorVenda;
+    float soma;
+    float maiorVenda = -1;
+    float menorVenda = -1;
+    float mediaVenda;
+    string maiorDiaVenda, menorDiaVenda;
     
     for (int i = 0; i < qtdDias; i++){
-        float valorVenda;
-        cout << "Digite a venda de " << diasSemana[i]<<endl;
+        cout << "Digite a venda de " << diasSemana[i] << ": ";
         cin >> valorVenda;
-        
-        for (int i = 0; valorVenda; i++ ) {
-            cout << "Vendas de " << diasSemana[i] << valorVenda <<endl;
-            
-        }
-        
+        //soma += valorVendas[i];
     }
+    mediaVenda = soma / qtdDias;
+    cout <<"Soma R$ "<< soma << endl;
+    cout <<"Média R$ "<< mediaVenda << endl;
+    
+    
     
    
     //getline(cin, diaSemana);
