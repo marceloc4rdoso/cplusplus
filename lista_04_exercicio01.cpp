@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
 #include <array> // std::array
 using namespace std;
@@ -14,6 +13,9 @@ using namespace std;
 
 int main() {
     
-    array<int, 7> semana = {0};
+    string diasSemana [] = {"Segunda-feira",  "Terca-feira", "Quarta-feira", "Quinta-feira","Sexta-feira", "Sabado", "Domingo"};
+    
+    cout << "Escolha o dia de vendas " << endl;
+    cout << "[ 0 ] Segunda-feira  [ 1 ] Terca-feira  [ 2 ] Quarta-feira\n[ 3 ] Quinta-feira. [ 4 ] Sexta-feira  [ 5 ] Sabado\n[ 6 ] Domingo";
     
 }
