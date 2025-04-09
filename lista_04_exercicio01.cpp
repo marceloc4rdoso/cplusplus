@@ -29,7 +29,9 @@ int main() {
     for (int i = 0; i < qtdDias; i++){
         cout << "Digite a venda de " << diasSemana[i] << ": ";
         cin >> valorVenda;
+        //array <float, 7> relacaoVendas = {valorVenda};
         soma += valorVenda;
+        
     }
     
     if(valorVenda > valorVenda){
@@ -39,6 +41,7 @@ int main() {
     mediaVenda = soma / qtdDias;
     
     cout << "A maior venda da semana foi de R$ " << maiorVenda << endl;
+    
     
     cout <<"Soma R$ "<< soma << endl;
     cout <<"Média R$ "<< mediaVenda << endl;
