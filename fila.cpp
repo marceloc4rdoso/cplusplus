@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <vestor>
+#include <vector>
 
 int main() {
     // Write C++ code here
