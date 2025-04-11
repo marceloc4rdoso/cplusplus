@@ -12,4 +12,4 @@ try {
 catch{
 }
 
-pode-se criar o erro utilizando #### throw
+pode-se criar o erro utilizando *throw*
