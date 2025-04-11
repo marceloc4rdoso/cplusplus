@@ -5,7 +5,7 @@
 Internamente C++ não tem tratativa de erros nativos.
 
 
-É comumente tratado com #### try catch...
+É comumente tratado com *try catch*...
 try {
 //
 }
